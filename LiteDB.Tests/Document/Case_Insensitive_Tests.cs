@@ -51,6 +51,7 @@ namespace LiteDB.Tests.Document
             };
 
             doc_Values_ProperCase.CompareTo(doc_Values_LowerCase, Collation.Default).Should().Be(0);
+            ((BsonValue)doc_Values_ProperCase).CompareTo((BsonValue)doc_Values_LowerCase, Collation.Default).Should().Be(0);
 
         }
     }
